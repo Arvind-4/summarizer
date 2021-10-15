@@ -1,0 +1,7 @@
+.idea/
+Include/
+Scripts/
+.flaskenv
+__pycache__/
+.env
+Lib/
