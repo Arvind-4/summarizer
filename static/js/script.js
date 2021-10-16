@@ -7,7 +7,7 @@ content.defaultValue = ''
 function copy_all() {
     text.select()
     document.execCommand('copy')
-    copy.innerText = 'copied!'
+    copy.innerHTML = 'Copied! <i class="fas fa-check-circle"></i>'
     window.getSelection().removeAllRanges()
 }
 
