@@ -9,7 +9,6 @@ Here's a list of the packages we will use to accomplish this:
 - HTML5
 - Tailwind CSS
 - Gunicorn
-- whitenoise
 - javascript
 - and more .
 
