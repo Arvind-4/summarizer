@@ -14,3 +14,11 @@ function copy_all() {
 function clear_all() {
     text.value = ''
 }
+
+function closeAlert(event) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+        element = element.parentNode;
+    }
+    element.parentNode.parentNode.removeChild(element.parentNode);
+}
