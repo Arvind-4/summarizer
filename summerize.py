@@ -65,14 +65,3 @@ def get_summary(content):
 
     value = clean_summary(cleaned_summary=cleaned_summary)
     return value
-#
-#
-# content = '''
-# Apple is the world's largest technology company by revenue (toiling $274.5 billion in 2020) and, since January 2021, the world's most valuable company.However, the company receives significant criticism regarding the labor practices of its contractors, its environmental practices, and business ethics, including anti-competitive behavior and materials pouring.In August 2018, Apple became the first publicly traded U.S. company to be valued at over $1 trillion and the first valued over $2 trillion two years later.It has a high level of brand loyalty and is ranged as the world's most valuable brand; as of January 2021, there are 1.65 billion Apple products in use worldwide.Is of 2021, Apple is the world's fourth-largest of vendor by unit sales, and fourth-largest smartphone manufacturer.The board recruited CEO Oil Amelie, who prepared the struggling company for eventual success with extensive reforms, product focus and layoffs in his 500-day tenure.
-#
-#
-#
-# '''
-#
-#
-# # print(get_summary(content))
