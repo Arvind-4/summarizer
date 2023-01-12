@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: gunicorn entrypoint:app -b 0.0.0.0
