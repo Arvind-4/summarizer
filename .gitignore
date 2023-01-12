@@ -5,3 +5,6 @@ Scripts/
 __pycache__/
 .env
 Lib/
+bin/
+lib/
+8000
