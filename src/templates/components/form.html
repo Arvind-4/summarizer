@@ -1,40 +1,54 @@
 <div class="app min-h-screen min-v-screen p-8 bg-grey-lightest font-sans">
-    <div class="row sm:flex">
-        <div class="col sm:w-1/2">
-            <form method="POST">
-                <div class="box border rounded flex flex-col shadow bg-white">
-                    <div class="box-title bg-grey-lighter px-3 py-2 border-b">
-                        <h3 class="text-sm text-grey-darker font-medium">Content</h3>
-                    </div>
-                    <textarea type='text' class="text-grey-darkest flex-1 p-2 m-1 bg-transparent" name="content" id="content" rows="20" placeholder="Enter your Content ..." required>{% if content %}{{ content }}{% endif %}</textarea>
-                </div>
-                <div class="text-center p-5">
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            id="submit-button"
-                            type="submit">
-                        Summarize <i class="fas fa-compress"></i>
-                    </button>
-                </div>
-            </form>
+  <div class="row sm:flex">
+    <div class="col sm:w-1/2">
+      <form method="POST">
+        <div class="box border rounded flex flex-col shadow bg-white">
+          <div class="box-title bg-grey-lighter px-3 py-2 border-b">
+            <h3 class="text-sm text-grey-darker font-medium">Content</h3>
+          </div>
+          <textarea type='text'
+                    class="text-grey-darkest flex-1 p-2 m-1 bg-transparent"
+                    name="content"
+                    id="content"
+                    rows="20"
+                    placeholder="Enter your Content ..."
+                    required>{% if content %}{{ content }}{% endif %}</textarea>
         </div>
-        <div class="col mt-8 sm:ml-8 sm:mt-0 sm:w-1/2">
-            <div class="box border rounded flex flex-col shadow bg-white">
-                <div class="box__title bg-grey-lighter px-3 py-2 border-b"><h3
-                        class="text-sm text-grey-darker font-medium">Result</h3></div>
-                <textarea class="text-grey-darkest flex-1 p-2 m-1 bg-transparent" name="tt" placeholder="Your Summary is ..." id='result' rows="20" onkeyup="disable_button()">{% if data %}{{ data }}{% endif %}</textarea>
-            </div>
-            <div class="text-center p-5">
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        onclick="copy_all()"
-                        type="button" id="copy-button">
-                    Copy <i class="fas fa-copy"></i>
-                </button>
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        onclick="clear_all()"
-                        id="clear-button" type="button">
-                    Clear <i class="fas fa-eraser"></i>
-                </button>
-            </div>
+        <div class="text-center p-5">
+          <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  id="submit-button"
+                  type="submit">
+            Summarize <i class="fas fa-compress"></i>
+          </button>
         </div>
+      </form>
     </div>
+    <div class="col mt-8 sm:ml-8 sm:mt-0 sm:w-1/2">
+      <div class="box border rounded flex flex-col shadow bg-white">
+        <div class="box__title bg-grey-lighter px-3 py-2 border-b">
+          <h3 class="text-sm text-grey-darker font-medium">Result</h3>
+        </div>
+        <textarea class="text-grey-darkest flex-1 p-2 m-1 bg-transparent"
+                  name="tt"
+                  placeholder="Your Summary is ..."
+                  id='result'
+                  rows="20"
+                  onkeyup="disable_button()">{% if data %}{{ data }}{% endif %}</textarea>
+      </div>
+      <div class="text-center p-5">
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                onclick="copy_all()"
+                type="button"
+                id="copy-button">
+          Copy <i class="fas fa-copy"></i>
+        </button>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                onclick="clear_all()"
+                id="clear-button"
+                type="button">
+          Clear <i class="fas fa-eraser"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
