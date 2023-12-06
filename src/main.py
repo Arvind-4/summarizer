@@ -1,10 +1,7 @@
-import pathlib
 from flask import Flask, render_template, request
-from dotenv import load_dotenv
-from textblob import TextBlob
 
 from .config import get_settings
-from .summerize import get_summary
+from .summerize import summarize
 
 settings = get_settings()
 
@@ -12,9 +9,9 @@ settings = get_settings()
 app = Flask(__name__, static_folder=settings.STATIC_DIR, static_url_path=settings.STATIC_URL, template_folder=settings.TEMPLATES_DIR)
 app.debug = settings.DEBUG
 app.secret_key = settings.SECRET_KEY
-app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['TEMPLATES_AUTO_RELOAD'] = bool(1)
 app.config['ENV'] = 'development'
-app.config['DEBUG'] = True
+app.config['DEBUG'] = settings.DEBUG
 
 
 
@@ -26,8 +23,8 @@ def index():
         content = request.form.get('content')
         words = len(content.split())
         if content != '' and words >= 100:
-            value = get_summary(content=content)
-            new_value = TextBlob(value).correct()
+            val = summarize(content)
+            new_value = val
             is_danger_alert = False
             is_success_alert = True
         else:
