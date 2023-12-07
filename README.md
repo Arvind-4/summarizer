@@ -1,47 +1,57 @@
-
 # Summarizer
+Summarise your content on go ... 
 
-Summarize your Content on  [summarizer-flask](https://summarizer-flask.herokuapp.com/)
+## 📦 Tech Stack:
 
-Here's a list of the packages we will use to accomplish this:
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)  - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
+- [Tailwind](https://tailwindcss.com/)  - Rapidly build modern websites without ever leaving your HTML.
+- [Vercel](https://vercel.com/)  - Vercel's Front end Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalised Web.
 
-- Flask
-- HTML5
-- Tailwind CSS
-- Gunicorn
-- javascript
-- and more .
+## Demo:
 
-## Code
+<a href="https://awesomesummarizer.vercel.app/">
+<img src=".github/static/homepage.png" alt="Home Page"/>
+</a>
 
-### Install Virtualenv
 
-```
-pip install virtualenv
-cd /path/to/folder
-mkdir summarizer
-cd summarizer
-python -m venv .
-```
 
-### Activate the Virtualenv
+## Getting Started: 
 
-```
-source scripts/activate
-```
+- Clone repository 
 
-### Install Dependencies
+```bash
+mkdir ~/Dev/summarizer -p
+cd ~/Dev/summarizer
+git clone https://github.com/Arvind-4/Summarizer .
+```  
 
-```
-cd /path/to/folder/summarizer
-git clone https://github.com/Arvind-4/Summarizer.git .
+- Install Dependencies:
+
+```bash
+cd ~/Dev/summarizer
+python3.8 -m pip install virtualenv
+python3.8 -m virtualenv . 
+source bin/activate
 pip install -r requirements.txt
 ```
 
-### Run the Code
+- Create  `.env`  file:
+Add Your Credentials  `.env`  from  `sample.env`:
 
+```bash
+DEBUG=
+SECRET_KEY=
 ```
-cd /path/to/folder/chatapp/src
-./run.sh
+Get your Secret key from:
+```python
+python3 -c 'import secrets; print(secrets.token_urlsafe(24))'
 ```
 
+- Run Server:
+
+```bash
+cd ~/Dev/summarizer
+bash commands/run.sh
+```
+
+Open [localhost:8000](http://localhost:8000) in your favourite browser :)
