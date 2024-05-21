@@ -22,7 +22,7 @@ Summarise your content on go ...
 ```bash
 mkdir ~/Dev/summarizer -p
 cd ~/Dev/summarizer
-git clone https://github.com/Arvind-4/Summarizer .
+git clone https://github.com/Arvind-4/summarizer .
 ```  
 
 - Install Dependencies:
